@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'ember-rails'
 gem 'ember-source', '1.5.0'
+gem 'emblem-rails'
 
 #gem 'therubyrhino'
 gem 'jquery-rails'
