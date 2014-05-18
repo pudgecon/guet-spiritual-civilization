@@ -1,3 +1,7 @@
 App.Router.map ()->
-  # @resource('posts')
+  @resource 'articles', ->
+    @route 'new'
+    @route 'article', path: ':article_id'
+
+  @resource 'settings'
 

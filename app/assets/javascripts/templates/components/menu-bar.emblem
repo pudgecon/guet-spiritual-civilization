@@ -1,0 +1,11 @@
+= link-to "index" class="brand"
+  | home
+ul
+  each menus
+    if devide
+      li.devide
+    else
+      li
+        = link-to router
+          i class=icon
+          = router

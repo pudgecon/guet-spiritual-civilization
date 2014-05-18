@@ -1,0 +1,8 @@
+= link-to "articles.new" class="btn btn-info"
+  i.fa.fa-plus
+  |  添加
+
+ul = each
+  li
+    = link-to "articles.article" this
+      = title

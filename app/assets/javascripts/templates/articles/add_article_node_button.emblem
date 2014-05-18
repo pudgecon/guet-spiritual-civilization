@@ -1,0 +1,13 @@
+.btn-group
+  button.btn.btn-info.dropdown-toggle data-toggle="dropdown"
+    | 添加节 
+    span.caret
+  ul.dropdown-menu
+    li
+      a{action "addArticleNode" "title"} href="#" 标题
+    li
+      a{action "addArticleNode" "info"} href="#" 信息栏
+    li
+      a{action "addArticleNode" "paragraph"} href="#" 段落
+    li
+      a{action "addArticleNode" "image"} href="#" 图片
