@@ -1,3 +1,51 @@
-input.article-title {
-  min-width: 500px;
+.article {
+  input.article-title {
+    min-width: 600px;
+  }
+  .preview-area {
+    h3 {
+      border-bottom: 5px solid red;
+    }
+    .title-preview {
+      font-size: 24px;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      text-indent: 32px;
+    }
+  }
+  .edit-area {
+    h3 {
+      border-bottom: 5px solid blue;
+    }
+    .editing {
+      > textarea {
+        width: 100%;
+        padding: 5px;
+        height: 100px;
+      }
+    }
+    .preview {
+      border: 1px solid #cccccc;
+      padding: 5px;
+      margin: 5px 0;
+      position: relative;
+      .actions {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: white;
+        > * { margin-left: 2px; }
+      }
+      &:hover {
+        .actions {
+          display: block;
+        }
+      }
+    }
+  }
 }
+
+

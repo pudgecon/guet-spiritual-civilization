@@ -1,0 +1,15 @@
+if editing
+  .editing
+    = textarea value=content.nodeText
+
+    .actions.text-right
+      button.btn.btn-primary{action "save"}
+        i.fa.fa-check
+else
+  .preview
+    = content.nodeText
+    .actions
+      button.btn.btn-success.btn-sm{action "edit"}
+        i.fa.fa-edit
+      button.btn.btn-danger.btn-sm
+        i.fa.fa-times

@@ -1,20 +1,29 @@
-.row
-  .col-xs-12
-    form.form-inline role="form"
-      .form-group
-        label.sr-only for="title" 标题
-        = input value=title class="form-control article-title" id="title" placeholder="请输入标题"
-      button.btn.btn-primary{action "save"} type="submit"
-        i.fa.fa-save
-        |  保存
-
-unless isNew
+.article
   .row
-    .col-xs-6
-      form role="form"
-        = article-nodes content=articleNodes
+    .col-xs-12
+      form.form-inline role="form"
         .form-group
-          partial "articles/add_article_node_button"
-    .col-xs-6
-      .article-preview
-        = previewHtml
+          label.sr-only for="title" 标题
+          = input value=title class="form-control article-title" id="title" placeholder="请输入标题"
+        button.btn.btn-primary{action "save"} type="submit"
+          i.fa.fa-save
+          |  保存
+
+  unless isNew
+    .row
+      .col-xs-6.edit-area
+        h3 编辑区
+        form role="form"
+          each articleNodes
+            = article-node content=this
+          else
+            | 还没有内容，点击“添加节”开始吧！
+
+          .form-group
+            partial "articles/add_article_node_button"
+
+      .col-xs-6.preview-area
+        h3 预览区
+        .article-preview
+          .title-preview = title
+          = previewHtml
