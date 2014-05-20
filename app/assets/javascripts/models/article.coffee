@@ -8,7 +8,7 @@ App.Article = DS.Model.extend
   articleNodes: DS.hasMany 'articleNode', async: true
 
   text: (->
-    @get('articleNodes').mapProperty('nodeText').join('\r\n')
+    @get('articleNodes').mapProperty('nodeText').join('\r\n\r\n')
   ).property(
     'articleNodes.@each.nodeType',
     'articleNodes.@each.nodeText',
