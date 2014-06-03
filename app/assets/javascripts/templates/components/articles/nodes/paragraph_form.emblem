@@ -11,5 +11,5 @@ else
     .actions
       button.btn.btn-success.btn-sm{action "edit"}
         i.fa.fa-edit
-      button.btn.btn-danger.btn-sm
+      button.btn.btn-danger.btn-sm{action "remove"}
         i.fa.fa-times
