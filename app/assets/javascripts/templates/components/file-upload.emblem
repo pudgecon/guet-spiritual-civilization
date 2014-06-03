@@ -1,0 +1,3 @@
+i{bind-attr class=":fa uploading:fa-spin uploading:fa-spinner:fa-upload"}
+yield
+input type='file' class='file-upload' name="file"

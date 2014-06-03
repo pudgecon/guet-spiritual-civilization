@@ -1,0 +1,14 @@
+.file-upload {
+  position: relative;
+  overflow: hidden;
+  input.file-upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    direction: ltr;
+    cursor: pointer;
+  }
+}
