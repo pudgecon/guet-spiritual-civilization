@@ -2,6 +2,8 @@
 #= require jquery_ujs
 #= require showdown
 #= require notifier
+#= require jquery.ui.widget
+#= require jquery.fileupload
 #= require bootstrap
 #= require handlebars
 #= require ember
