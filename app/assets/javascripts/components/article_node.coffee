@@ -13,6 +13,24 @@ App.ArticleNodeComponent = Ember.Component.extend
   actions:
     save: ->
       @set('editing', false)
-      @get('content.content').save()
+      @get('content').save()
+
     edit: ->
       @set('editing', true)
+
+    remove: ->
+      node = @get('content')
+      article = node.get('article')
+      node.deleteRecord()
+      # TODO(Pudgecon)
+      # confirmation!
+      node.save().then =>
+        debugger
+        article.get('articleNodes').removeObject node
+        Notifier.success "删除成功！"
+      , =>
+        Notifier.error "删除失败！"
+
+    imageSaved: (json) ->
+      @set('content.nodeText', "![Alt text](#{json.image.path})")
+      @send('save')

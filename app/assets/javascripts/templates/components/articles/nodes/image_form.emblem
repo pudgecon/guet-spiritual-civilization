@@ -1,0 +1,16 @@
+if editing
+  .editing
+    = file-upload action="imageSaved"
+      | 上传图片
+
+    .actions.text-right
+      button.btn.btn-primary{action "save"}
+        i.fa.fa-check
+else
+  .preview
+    = md-img-tag content.nodeText
+    .actions
+      button.btn.btn-success.btn-sm{action "edit"}
+        i.fa.fa-edit
+      button.btn.btn-danger.btn-sm{action "remove"}
+        i.fa.fa-times

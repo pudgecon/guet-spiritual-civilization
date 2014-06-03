@@ -23,17 +23,17 @@ class Admin::ArticlesController < ApplicationController
     if article.update_attributes resource_params
       render json: article, serializer: ArticleSerializer, status: :ok
     else
-      render json: { errors: article.errors }, status: :unprocess_entity
+      render json: { errors: article.errors }, status: :unprocessable_entity
     end
   end
 
   def destroy
-    article = Article.params[:id]
+    article = Article.find params[:id]
 
     if article.destroy
-      head :ok
+      render json: {}, status: :ok
     else
-      render json: { errors: article.errors }, status: :unprocess_entity
+      render json: { errors: article.errors }, status: :unprocessable_entity
     end
   end
 
