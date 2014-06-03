@@ -37,7 +37,7 @@
         top: 0;
         right: 0;
         background: white;
-        > * { margin-left: 2px; }
+        > * { margin-left: 2px; margin-bottom: 2px; }
       }
       &:hover {
         .actions {
